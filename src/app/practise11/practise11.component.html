@@ -1,0 +1,37 @@
+<div style="margin: 5px;">
+  <h3>練習1 新建一個service並且在切換頁面時將input輸入的資料傳遞過去下一個頁面</h3>
+  <!-- 請將練習1寫在這下面 -->
+  <h3>練習1</h3>
+  <label>要傳遞的內容：</label>
+  <input type="text" [(ngModel)]="practice1Input" (keyup)="inputTyping()"><br>
+  <br>
+  <button (click)="turnBackPractice11()" style="margin-right: 25px;">返回practice11</button>
+  <button (click)="go11_1()">點我換頁</button>
+  <br>
+  <br>
+  <h3>練習2 使用＠input ＠ouput按照圖片說明將職業與初始職塞進去組件內</h3>
+  <h3>組件可以先將之前的等級計算器複製過去在做修改</h3>
+  <div style="display: flex;">
+    <img style="height: 400px; margin-right: 3px;" src="/practise12.png">
+  </div>
+  <!-- 請將練習2寫在這下面 -->
+  <h3>練習2</h3>
+  <div style="font-weight: bold; background-color: white; width: 927.72px; padding-right: 29px; padding-bottom: 10px;">
+    <h5 style="font-weight: bold;">職業選擇</h5>
+    <button style="margin-right: 5px;" (click)="mageButtonPressed()">法師</button>
+    <button style="margin-right: 5px;" (click)="warriorButtonPressed()">戰士</button>
+    <button (click)="tankButtonPressed()">坦克</button>
+    <br>
+    以下內容是這頁本身的內容
+    <br>
+    ------------------------------
+    <br>
+    <app-level-calculator [attackNum]="attackNum" [defenceNum]="defenseNum" [levelNum]="levelNum"
+      [occupation]="occupation" [occupationType]="occupationType"
+      (outputJson)="showValue($event)"
+      >
+
+    </app-level-calculator>
+  </div>
+</div>
+<router-outlet></router-outlet>

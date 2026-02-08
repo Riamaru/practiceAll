@@ -1,0 +1,11 @@
+<div style="margin: 5px;">
+  <h3>使用底下的關閉/開啟按鈕 使用＠if讓圖片顯示跟不顯示(需新增一個全域變數來判斷)</h3>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <button (click)="chaneBool()">關閉/開啟</button><br>
+  @if(show){
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wd01HMlCGLLLDmgQLwoU-7JrcUT43aXSrw&s">
+  }@else if (!show) {
+    <img src="https://img.shoplineapp.com/media/image_clips/663c8aebb455500019558155/original.jpg?1715243755">
+  }
+</div>

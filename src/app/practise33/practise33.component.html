@@ -1,0 +1,43 @@
+<div style="margin: 5px;">
+  <h3>點擊確認按鈕時 請將畫面上的資料(包含標題 說明...等)跟使用者輸入的內容跟選項都打包成一個json並且打印出來</h3>
+  <!-- 請將練習寫在這下面 -->
+  <div style="border: 2px solid; margin-left: 5%; width: 500px; padding: 10px;">
+    <h3>標題: {{ jsonData.title }}</h3>
+    <h3>說明: {{ jsonData.content }}</h3>
+    <span style="color: red;">提示: {{ jsonData.hint }}</span><br>
+    @for (userContent of jsonData.userContent; track $index) {
+    <div>
+      <label>{{ userContent.questName }}</label>
+      @if(userContent.questName =='姓名'){
+      <input [(ngModel)]="nameInput" (keydown.enter)="phoneFocus()">
+      }@else if (userContent.questName =='電話') {
+      <input type="text" (keyup)="deletePhoneString()" #phone [(ngModel)]="phoneInput" (keydown.enter)="ageFocus()">
+      }@else if(userContent.questName =='年紀'){
+      <input type="text" (keyup)="deleteAgeString()" #age [(ngModel)]="ageInput" (keydown.enter)="confirm()">
+      }
+
+    </div><br>
+    }
+    <button (click)="confirm()">確認</button>
+  </div>
+  <br>
+  <div style="border: 2px solid; margin-left: 5%; width: 500px; padding: 10px;">
+    <h3>標題: {{ jsonData.title }}</h3>
+    <h3>說明: {{ jsonData.content }}</h3>
+    <span style="color: red;">提示: {{ jsonData.hint }}</span><br>
+    @for (userContent of restructureUserContent; track $index) {
+    <div>
+      <label>{{ userContent.questName }}：</label>
+      @if(userContent.questAnswer){
+        @if(userContent.questName =='姓名'){
+          {{userContent.questAnswer}}
+        }@else if (userContent.questName =='電話') {
+          {{userContent.questAnswer}}
+        }@else if(userContent.questName =='年紀'){
+          {{userContent.questAnswer}}
+        }
+      }
+    </div><br>
+    }
+  </div>
+</div>

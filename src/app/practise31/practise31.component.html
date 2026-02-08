@@ -1,0 +1,33 @@
+<div style="margin: 5px;">
+  <h3>
+    將TS中的全域變數jsonData呈現在畫面上(畫面自己設計 jsonData中的欄位都要顯示在畫面上)
+    遇到陣列Array欄位請勿直接寫死(需要用for迴圈呈現)
+  </h3>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <table style="font-size: 30px;">
+    <thead>
+      <tr>
+        <th scope="col">問卷名稱</th>
+        <th scope="col">問卷說明</th>
+        <th scope="col">開始時間</th>
+        <th scope="col">結束時間</th>
+        <th scope="col">選項內容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <th scope="col">{{jsonData.questName}}</th>
+      <th scope="col">{{jsonData.questContent}}</th>
+      <th scope="col">{{jsonData.startDate}}</th>
+      <th scope="col">{{jsonData.endDate}}</th>
+      <th scope="col">
+        @for(option of jsonData.options;track $index){
+
+        {{option.optionName}}<br>
+
+        }
+      </th>
+    </tbody>
+
+  </table>
+</div>

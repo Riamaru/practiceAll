@@ -1,0 +1,36 @@
+<div style="margin: 5px;">
+  <h3>請重現下圖練習</h3>
+  <h3>等級計算機，按升級等級會增加並且攻擊力跟防禦力也會增加(攻擊每加一等*3、防禦每加一等*2)</h3>
+  <h3>下方的輸入框可以直接輸入等級並且按下修改等級會去計算攻擊力與防禦力，重置按鈕將會把等級/攻擊/防禦恢復至1等</h3>
+  <div style="display: flex;">
+    <img style="height: 400px; margin-right: 3px;" src="/practise9.png">
+  </div>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <div style="border: solid; width: 300px; padding: 5px; position: relative;">
+    <button style="display: flex; position: absolute; right: 5px" (click)="resetButtonPressed()">重置</button>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <h5 style="color: red; font-weight: bold;">角色等級計算器</h5>
+    </div>
+    <h5 style="font-weight: bold;">等級: {{levelNum}}</h5>
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+      <button style="width: 125px; margin-right: 25px;" (click)="levelUpButtonPressed()">升級</button>
+      <button style="width: 125px;" (click)="levelDownButtonPressed()">降級</button>
+    </div>
+    <div style="font-weight: bold;">
+      <p>攻擊力: {{attackNum}}</p>
+      <p>防禦力: {{defenceNum}}</p>
+    </div>
+    <div>
+      <p style="font-size: 11px; color: red;">註解:角色初始等級為1，初始攻擊/防禦為10，每提升一級攻擊*3 防禦*2，降級則除3跟2。</p>
+    </div>
+    <div>
+      <p style="font-size: 12px; font-weight: bold;" >自行輸入等級: <input type="number" [(ngModel)]="levelInput"></p>
+    </div>
+    <div>
+      <button style="width: 100%;" (click)="correctLevelNum()">修改等級</button>
+    </div>
+    <br>
+  </div>
+</div>

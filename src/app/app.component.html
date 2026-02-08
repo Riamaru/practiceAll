@@ -1,0 +1,10 @@
+<!-- 此頁面除非要寫每個頁面共用畫面(例如：ToolBar、SideNav...之類)否者不會在這頁加入任何東西 -->
+<button routerLink="/" routerLinkActive="router-link-active"
+  style="position: fixed; top: 5px; right: 10px;">返回首頁</button>
+
+<router-outlet></router-outlet>
+@if(openLoading){
+<div style="position: absolute; height: 100%; width: 100%; top: 0px; left: 0px; backdrop-filter: blur(2px);">
+  <mat-spinner style="top: 50%; left: 50%; transform: translate(-50%,-50%);"></mat-spinner>
+</div>
+}

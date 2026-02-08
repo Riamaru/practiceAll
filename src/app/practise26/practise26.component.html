@@ -1,0 +1,15 @@
+<div style="margin: 5px;">
+  <h3>根據參考網站 將全域變數chartData呈現在畫面上(圓餅圖)</h3>
+  <h3>參考網站<a
+      href="https://medium.com/@paul87224/angular-%E4%BD%BF%E7%94%A8chart-js%E9%80%B2%E8%A1%8C%E6%95%B8%E6%93%9A%E5%8F%AF%E8%A6%96%E5%8C%96-9d90319ee626">網址</a>
+  </h3>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <div style="display: flex; justify-content: center;">
+  <div style="width: 300px;">
+    @for(data of chartData;track $index){
+    <canvas id={{data.id}}></canvas>
+    }
+  </div>
+</div>
+</div>

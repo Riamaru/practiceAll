@@ -1,0 +1,36 @@
+<div>
+  以下內容是組件內容
+  <br>
+  攻擊力/防禦力/職業都是Input進去的資料會根據你選擇的職業做變更(上方按鈕 預設為法師)
+  <br>
+  確定修改按鈕會觸發output並且將攻擊力/防禦力/等級回傳出來並且觸發彈出視窗顯示
+</div>
+<div style="display: flex; justify-content: flex-end;">
+  <div style="border: solid; width: 510px; padding: 5px; position: relative;">
+    <button style="display: flex; position: absolute; right: 5px" (click)="resetButtonPressed()">重置</button>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <h5 style="font-weight: bold;">角色等級計算器({{occupation}})</h5>
+    </div>
+    <h5 style="font-weight: bold;">等級: {{levelNum}}</h5>
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+      <button style="width: 232px; margin-right: 25px;" (click)="levelUpButtonPressed()">升級</button>
+      <button style="width: 232px;" (click)="levelDownButtonPressed()">降級</button>
+    </div>
+    <div>
+      <p>攻擊力: {{attackNum}}</p>
+      <p>防禦力: {{defenceNum}}</p>
+    </div>
+
+    <div>
+      <p style="font-size: 12px;">自行輸入等級: <input type="number" style="width: 200px;" [(ngModel)]="levelInput"></p>
+    </div>
+    <div>
+      <button style="width: 100%;" (click)="correctLevelNum()">修改等級</button>
+    </div>
+    <br>
+    <div>
+      <button (click)="confirmCorrect()">確定修改</button>
+    </div>
+  </div>
+</div>

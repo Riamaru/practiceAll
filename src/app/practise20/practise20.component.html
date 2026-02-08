@@ -1,0 +1,19 @@
+<div style="margin: 5px;">
+  <h3>練習1將material的datepicker抓過來放到自己的頁面上(網站中的任一範例皆可)</h3>
+  <h3>參考網站<a href="https://material.angular.io/components/datepicker/overview">網址</a></h3>
+  <!-- 請將練習1寫在這下面 -->
+  <h3>練習1</h3>
+  <mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+
+  <h3>練習2 請用input寫出日期選擇器(type="date")</h3>
+  <!-- 請將練習2寫在這下面 -->
+  <h3>練習2</h3>
+  <input type="date">
+</div>

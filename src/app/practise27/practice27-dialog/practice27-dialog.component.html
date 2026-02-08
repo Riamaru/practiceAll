@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{data}}</h2>
+<mat-dialog-content>
+<input [(ngModel)]="userReply"  (keydown.enter)="reply()" style="width: 100%;">
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button (click)="onNoClick()" style="margin-right: 20px;">關閉</button>
+  <button (click)="reply()">回答</button>
+</mat-dialog-actions>

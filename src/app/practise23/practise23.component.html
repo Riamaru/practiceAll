@@ -1,0 +1,9 @@
+<div style="margin: 5px;">
+  <h3>請設置一個全域變數(boolean) 並且讓下面的按鈕可以true/false互相變更</h3>
+  <h3>在底下的H1中設置ngClass讓他在全域變數為true時可以更改顏色(大小變回正常)</h3>
+  <h3>在底下的H1中設置ngClass讓他在全域變數為false時可以更改大小(顏色變回正常)</h3>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <button (click)="changeBool()">change</button>
+  <h1 [ngClass]="{'practiceChangeCss': changeClass, 'practiceCss': !changeClass}">NgClass練習</h1>
+</div>

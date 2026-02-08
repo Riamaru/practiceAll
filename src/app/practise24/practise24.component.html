@@ -1,0 +1,16 @@
+<div style="margin: 5px;">
+  <h3>在網站中找到 Tabs and navigation 的範例並且把它重現(除了這頁還需要有另外2~3個頁面做Tabs路由切換)</h3>
+  <h3>參考網站<a href="https://material.angular.io/components/tabs/overview">網址</a></h3>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <div>
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+      @for (link of links; track link) {
+      <a mat-tab-link (click)="activeLink = link.name" routerLink={{link.path}} [active]="activeLink == link.name">
+        {{link.name}} </a>
+      }
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+    <router-outlet></router-outlet>
+  </div>
+</div>

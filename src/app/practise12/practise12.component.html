@@ -1,0 +1,32 @@
+<div style="margin: 5px;">
+  <h3>請使用TS中的全域變數userArray重現下圖練習</h3>
+  <div style="display: flex;">
+    <img style="height: 400px; margin-right: 3px;" src="/practise13.png">
+  </div>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <div style="width: 451.34px; background-color: white; padding: 10px;">
+    @for(data of userArray;track $index){
+    <div style="border: solid; width: 425px; margin-bottom: 10px; font-weight: bold; padding: 2%;">
+      <div style="display: flex; justify-content: center;">
+        <h3 style="font-weight: bold;">
+          {{data.userName}}
+        </h3>
+      </div>
+      <h6 style="font-weight: bold">擁有道具：</h6>
+      <ul>
+        @for(index of data.props; track $index){
+
+        <li>{{index.propsName}} 數量：{{index.amount}}</li>
+
+        }
+      </ul>
+    </div>
+    }
+  </div>
+
+  <h3>設計點擊下方＋按鈕時 可以新增一筆userArray的資料</h3>
+  <!-- 請將練習2寫在這下面 -->
+  <h3>練習2</h3>
+  <button (click)="addData()">＋</button>
+</div>

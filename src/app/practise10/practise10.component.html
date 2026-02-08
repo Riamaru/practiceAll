@@ -1,0 +1,26 @@
+<div style="margin: 5px;">
+  <h3>請重現下圖練習(總共需要多新增3個頁面 請自行新增)</h3>
+  <h3>左圖中的超連結需要使用到routerLinkActive去修改觸發文字顏色</h3>
+  <h3>右圖為延伸練習 需要在路由底下顯示其子路由內容</h3>
+  <div style="display: flex;">
+    <img style="height: 400px; margin-right: 3px;" src="/practise10.png">
+    <img style="height: 400px; margin-right: 3px;" src="/practise11.png">
+  </div>
+  <!-- 請將練習寫在這下面 -->
+  <h3>練習</h3>
+  <div style="background-color: white; padding: 20px; width: 658.75px;">
+    <h1 style="font-weight: bold;">路由練習</h1>
+    <p>使用HTML routerLink做觸發換頁</p>
+    <p><a [routerLink]="['/practise10/FirstComponent']" routerLinkActive="a">First Component</a></p>
+    <p><a [routerLink]="['/practise10/SecondComponent']" routerLinkActive="a">Second Component</a></p>
+    <h4>按鈕需使用TS做觸發換頁</h4>
+    <button style="margin-right: 5px;" (click)="homeButtonPressed()">返回起始頁</button>
+    <button style="margin-right: 5px;" (click)="goFirstComponent()">First Component</button>
+    <button (click)="goSecondComponent()">Second Component</button>
+    <div style="margin-top: 30px;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>
